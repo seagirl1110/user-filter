@@ -2,6 +2,7 @@ import styles from './../styles/Filter.module.css';
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { setFilter } from './../redux/actions';
+import PropTypes from 'prop-types';
 
 function Filter({ filterValue, setFilterValue }) {
   const [value, setValue] = useState('');
@@ -33,5 +34,10 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   setFilterValue: (value) => dispatch(setFilter(value)),
 });
+
+Filter.propTypes = {
+  filterValue: PropTypes.string,
+  setFilterValue: PropTypes.func,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);
