@@ -1,0 +1,7 @@
+.list_container {
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    padding: 10px;
+}

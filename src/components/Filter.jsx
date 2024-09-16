@@ -17,9 +17,12 @@ function Filter({ filterValue, setFilterValue }) {
   };
 
   return (
-    <div>
-      <input value={value} onChange={handleChange} type="text" />
-    </div>
+    <input
+      className={styles.filter_input}
+      value={value}
+      onChange={handleChange}
+      type="text"
+    />
   );
 }
 

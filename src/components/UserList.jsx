@@ -5,7 +5,7 @@ import UserItem from './UserItem';
 
 function UserList({ users, filterValue }) {
   return (
-    <div>
+    <div className={styles.list_container}>
       {users
         .filter((user) =>
           user.name.toLowerCase().includes(filterValue.toLowerCase())
